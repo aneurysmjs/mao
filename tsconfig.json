@@ -4,19 +4,26 @@
     "strict": true,
     "lib": [
       "dom",
-      "es2015"
+      "esnext"
     ],
-    "jsx": "react",
+    "jsx": "preserve",
     "module": "esNext",
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    }
   },
   "files": [
     "./src/main.tsx"
   ],
   "include": [
-    "./src/**/*"
+    "./src/ts/**/*"
   ],
   "exclude": [
     "node_modules"
