@@ -2,12 +2,6 @@ import * as React from 'react';
 
 import './assets/scss/styles.scss';
 
-declare namespace JSX {
-  interface IntrinsicElements {
-    foo: { requiredProp: string; optionalProp?: number }
-  }
-}
-
 function App() {
   return (
     <section>
