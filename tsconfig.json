@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "strict": true,
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "jsx": "react",
+    "module": "esNext",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "strictNullChecks": true
+  },
+  "files": [
+    "./src/main.tsx"
+  ],
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
