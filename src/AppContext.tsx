@@ -1,9 +1,9 @@
 
 import { createContext } from 'react';
 
-export type SelectedType = { [key: string]: string };
+export interface SelectedType { [key: string]: string };
 
-type AppContextType = {
+interface AppContextType {
   handle: (SelectedType) => SelectedType;
 };
 

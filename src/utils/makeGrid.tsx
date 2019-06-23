@@ -1,5 +1,5 @@
 
-import isFunction from '/utils/isFunction';
+import isFunction from '@/utils/isFunction';
 
 export default function makeGrid(
   m: number,
@@ -7,7 +7,7 @@ export default function makeGrid(
   initial: () => number | number
 ): Array<Array<number>> {
   let a = null;
-  let matrix = [];
+  const matrix = [];
   for (let i = 0; i < m; i += 1) {
     a = [];
     for (let j = 0; j < n; j += 1) {

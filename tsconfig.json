@@ -1,31 +1,30 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    // this enables stricter inference for data properties on `this`
     "strict": true,
-    "lib": [
-      "dom",
-      "esnext"
-    ],
-    "jsx": "preserve",
+    // if using webpack 2+ or rollup, to leverage tree shaking:
     "module": "esNext",
     "moduleResolution": "node",
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "*": [
+      "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "types": [
+      "./src/service-worker.d.ts"
+    ]
   },
-  "files": [
-    "./src/main.tsx"
-  ],
   "include": [
-    "./src/ts/**/*"
-  ],
-  "exclude": [
-    "node_modules"
+    "./src/**/*"
   ]
 }

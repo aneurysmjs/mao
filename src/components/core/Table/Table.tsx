@@ -3,7 +3,12 @@ import React from 'react';
 
 import './Table.scss';
 
-const Table = ({ children, isFull }) => (
+interface PropTypes {
+  children: Array<JSX.Element> | JSX.Element,
+  isFull: boolean
+}
+
+const Table = ({ children, isFull }: PropTypes) => (
   <div className={`table ${isFull ? 'table--full' : ''}`}>
     <div className="table__tbody">
       { children }
