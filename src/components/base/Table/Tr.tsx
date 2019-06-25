@@ -2,7 +2,7 @@
 import React from 'react';
 
 interface PropsType {
-  children: JSX.Element
+  children: Array<JSX.Element> | JSX.Element, 
 };
 
 export const Tr = (props: PropsType) => (

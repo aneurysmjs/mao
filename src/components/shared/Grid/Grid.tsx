@@ -1,4 +1,3 @@
-// @flow strict
 import React, { useContext, SyntheticEvent } from 'react';
 // @ts-ignore
 import has from 'ramda/src/has';
@@ -28,13 +27,14 @@ interface PropsType {
 
 function Grid({ grid, size }: PropsType) {
   const { handle } = useContext(AppContext);
-  const gridSize = `${size ? size : SIZE}px`;
+  const gridSize = `${size != null ? size : SIZE}px`;
 
   const handleClick = (evt: SyntheticEvent<HTMLDivElement>): void => {    
     const { target } = evt;
     const hasCoords = [has('col'), has('row')];  
     // @ts-ignore  
     if (target instanceof HTMLDivElement && allPass(hasCoords)(target.dataset)) {
+      // @ts-ignore
       handle({ ...target.dataset });
     }
   };

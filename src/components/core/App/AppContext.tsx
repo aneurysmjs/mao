@@ -1,12 +1,11 @@
 import { createContext } from 'react';
 
 export interface SelectedType { 
-  col: string,
-  row: string
+  [key: string]: string
 };
 
 interface AppContextType {
-  handle: (SelectedType) => SelectedType;
+  handle: (item: SelectedType) => SelectedType;
 };
 
 export default createContext<AppContextType>({
