@@ -1,9 +1,18 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import App from './App';
+
+import { App } from '@/components/core/App';
+
+import './assets/scss/styles.scss';
 
 const app = document.querySelector('#app');
 
-if (app) {
-  render(<App />, app);
+const AppWrapper = () => (
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+if (app !== null) {
+  render(<AppWrapper />, app);
 }

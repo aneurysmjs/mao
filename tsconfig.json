@@ -19,9 +19,6 @@
     "lib": [
       "dom",
       "es6"
-    ],
-    "types": [
-      "./src/service-worker.d.ts"
     ]
   },
   "include": [

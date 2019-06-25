@@ -1,7 +1,9 @@
-
 import { createContext } from 'react';
 
-export interface SelectedType { [key: string]: string };
+export interface SelectedType { 
+  col: string,
+  row: string
+};
 
 interface AppContextType {
   handle: (SelectedType) => SelectedType;
