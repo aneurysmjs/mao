@@ -14,7 +14,7 @@ const Home = () => {
     <section className="flex-grow-1 py-0">
       <article>
         <p className="text-center">
-          This is a project
+          La mejor manera de desintoxicarse es no intoxicarse
         </p>
         <Grid
           grid={initialGrid}

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "A",
+    "name": "Frutas ácidas",
+    "category": "acidFruits"
+  },
+  {
+    "id": "B",
+    "name": "Frutas semiácidas",
+    "category": "semiAcidFruits"
+  },
+  {
+    "id": "C",
+    "name": "Frutas neutras",
+    "category": "neutralFruits"
+  },
+  {
+    "id": "D",
+    "name": "Frutas disecadas",
+    "category": "driedFruits"
+  },
+  {
+    "id": "E",
+    "name": "Frutos oleginosos",
+    "category": "OleaginousFruits"
+  },
+  {
+    "id": "F",
+    "name": "Ajos y cebollas",
+    "category": "garlicAndOnions"
+  },
+  {
+    "id": "G",
+    "name": "Verduras",
+    "category": "vegetables"
+  },
+  {
+    "id": "H",
+    "name": "Hortalizas",
+    "category": "vegetables1"
+  },
+  {
+    "id": "I",
+    "name":"Feculantes",
+    "category": "feculants"
+  },
+  {
+    "id": "J",
+    "name":"Cereales",
+    "category": "cereals"
+  },
+  {
+    "id": "K",
+    "name":"Legumbres y brotes",
+    "category": "LegumesAndSprouts"
+  },
+  {
+    "id": "L",
+    "name":"Huevos",
+    "category": "eggs"
+  },
+  {
+    "id": "M",
+    "name":"Carnes y pescados",
+    "category": "meatAndFish"
+  },
+  {
+    "id": "N",
+    "name":"Limón",
+    "category": "lemon"
+  },
+  {
+    "id": "O",
+    "name":"Lácteos no maternos",
+    "category": "nonMaternalDairy"
+  },
+  {
+    "id": "P",
+    "name":"Lácteos maternos",
+    "category": "maternalDairy"
+  }
+]
