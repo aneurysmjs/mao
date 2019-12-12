@@ -1,8 +1,4 @@
-export default function makeGrid(
-  m: number,
-  n: number,
-  initial: () => number
-): Array<Array<number>> {
+export default function makeGrid(m: number, n: number, initial: () => number): number[][] {
   let a = null;
   const matrix = [];
   for (let i = 0; i < m; i += 1) {

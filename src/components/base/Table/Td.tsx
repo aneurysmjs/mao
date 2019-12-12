@@ -1,28 +1,17 @@
-
 import React from 'react';
 
 interface PropsType {
-  children?: JSX.Element,
+  children?: JSX.Element;
   style?: {
-    [key: string]: string | number
-  },
-  col: number,
-  row: number,
-};
+    [key: string]: string | number;
+  };
+  col: number;
+  row: number;
+}
 
-const Td = ({
-  children,
-  style,
-  col,
-  row,
-}: PropsType) => (
-  <div
-    style={style || {}}
-    className="table__td"
-    data-col={col}
-    data-row={row}
-  >
-    { children }
+const Td = ({ children, style, col, row }: PropsType): JSX.Element => (
+  <div style={style || {}} className="table__td" data-col={col} data-row={row}>
+    {children}
   </div>
 );
 

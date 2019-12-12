@@ -1,15 +1,11 @@
-import React from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 
 import './Layout.scss';
 
 interface PropTypes {
-  children: Array<JSX.Element> | JSX.Element,
-};
+  children?: ReactNode;
+}
 
-const Layout = ({ children }: PropTypes) => (
-  <main>
-    { children }
-  </main>
-);
+const Layout = ({ children }: PropTypes): ReactElement => <main>{children}</main>;
 
 export default Layout;

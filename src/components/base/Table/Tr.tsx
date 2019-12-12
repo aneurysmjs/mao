@@ -1,14 +1,11 @@
-
-import React from 'react';
+import React, { ReactNode, FunctionComponent } from 'react';
 
 interface PropsType {
-  children: Array<JSX.Element> | JSX.Element, 
-};
+  children: ReactNode;
+}
 
-export const Tr = (props: PropsType) => (
-  <div className="table__tr">
-    { props.children }
-  </div>
+export const Tr: FunctionComponent<PropsType> = (props: PropsType) => (
+  <div className="table__tr">{props.children}</div>
 );
 
 export default Tr;

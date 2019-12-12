@@ -20,7 +20,7 @@ const Navbar = ({ history }: PropsType) => {
     <nav className="navbar navbar-expand-lg navbar-light mb-5">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          Trofologic
+          Mao
         </Link>
         <button
           className="navbar-toggler"
