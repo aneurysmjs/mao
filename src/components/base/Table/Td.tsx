@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 
 interface PropsType {
-  children?: JSX.Element;
+  children?: ReactNode;
   style?: {
     [key: string]: string | number;
   };
@@ -9,7 +9,7 @@ interface PropsType {
   row: number;
 }
 
-const Td = ({ children, style, col, row }: PropsType): JSX.Element => (
+const Td: FunctionComponent<PropsType> = ({ children, style, col, row }: PropsType) => (
   <div style={style || {}} className="table__td" data-col={col} data-row={row}>
     {children}
   </div>
