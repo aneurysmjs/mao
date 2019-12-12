@@ -20,7 +20,7 @@ module.exports = (mode) => {
     resolve: {
       alias: {
         api$: `${paths.src}/api/api.tsx`,
-        '@': `${paths.src}`,
+        '~': `${paths.src}`,
       },
       extensions: ['.ts', '.tsx', '.js', '.json'],
     },
