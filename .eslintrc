@@ -1,62 +1,54 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "jsx": true,
-    "useJSXTextNode": true
-  },
-  "settings": {
-    "import/resolver": "webpack"
-  },
   "env": {
     "browser": true,
+    "jest": true,
     "node": true
   },
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "airbnb-base",
+    "plugin:@typescript-eslint/recommended", 
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "prettier/@typescript-eslint"
+    // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
   ],
   "plugins": [
-    "@typescript-eslint",
+    "import",
+    "@typescript-eslint", 
     "react",
-    "react-hooks"
+    "react-hooks",
+    "jsx-a11y"
   ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack.config.js"
+      }
+    }
+  },
+  "parserOptions":  {
+    "ecmaVersion": 2018,  // Allows for the parsing of modern ECMAScript features
+    "sourceType": "module"  // Allows for the use of imports
+  },
   "rules": {
-    "indent": [
-      "error",
-      2,
-      {
-        "SwitchCase": 1
-      }
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "single",
-      {
-        "allowTemplateLiterals": true
-      }
-    ],
-    "semi": [
-      "error",
-      "always"
-    ],
+    "@typescript-eslint/indent": ["error", 2],
+    "react/jsx-uses-vars": "error",
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "import/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": true
       }
-    ],
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/array-type": ["off"],
-    "@typescript-eslint/indent": ["error", 2],
-    "@typescript-eslint/no-object-literal-type-assertion": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    ]
   }
 }
