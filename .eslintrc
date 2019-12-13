@@ -39,6 +39,7 @@
     "sourceType": "module"  // Allows for the use of imports
   },
   "rules": {
+    "react/jsx-sort-props": ["error"],
     "@typescript-eslint/indent": ["error", 2],
     "react/jsx-uses-vars": "error",
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
