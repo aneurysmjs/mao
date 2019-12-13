@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, ComponentType } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import classNames from 'classnames';
 
 interface PropsType {
   history: {
-    push(s: string): void
-  }
+    push(s: string): void;
+  };
 }
 
-const Navbar = ({ history }: PropsType) => {
+const Navbar: ComponentType<PropsType> = ({ history }: PropsType) => {
   const [isOpen, setOpen] = useState(false);
 
   const handleClick = (endpoint: string): void => {
@@ -36,22 +36,21 @@ const Navbar = ({ history }: PropsType) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className={classNames(
-            'collapse navbar-collapse justify-content-end', 
-            {
-              show: isOpen
-            })}
+          className={classNames('collapse navbar-collapse justify-content-end', {
+            show: isOpen,
+          })}
         >
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <a
+              <button
+                type="button"
                 className="nav-link"
-                onClick={() => {
+                onClick={(): void => {
                   handleClick('/');
                 }}
               >
-                  Home
-              </a>
+                Home
+              </button>
             </li>
           </ul>
         </div>
