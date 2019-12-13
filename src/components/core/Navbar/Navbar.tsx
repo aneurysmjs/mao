@@ -1,14 +1,8 @@
-import React, { useState, ComponentType } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import React, { useState, FunctionComponent } from 'react';
+import { Link, withRouter, RouteComponentProps } from 'react-router-dom';
 import classNames from 'classnames';
 
-interface PropsType {
-  history: {
-    push(s: string): void;
-  };
-}
-
-const Navbar: ComponentType<PropsType> = ({ history }: PropsType) => {
+const Navbar: FunctionComponent<RouteComponentProps> = ({ history }: RouteComponentProps) => {
   const [isOpen, setOpen] = useState(false);
 
   const handleClick = (endpoint: string): void => {
@@ -24,14 +18,10 @@ const Navbar: ComponentType<PropsType> = ({ history }: PropsType) => {
         </Link>
         <button
           className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          onClick={() => {
+          onClick={(): void => {
             setOpen(!isOpen);
           }}
+          type="button"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -41,13 +31,14 @@ const Navbar: ComponentType<PropsType> = ({ history }: PropsType) => {
           })}
         >
           <ul className="navbar-nav">
-            <li className="nav-item active">
+            <li className="nav-item">
               <button
-                type="button"
-                className="nav-link"
+                className="btn btn-link"
                 onClick={(): void => {
                   handleClick('/');
                 }}
+                role="link"
+                type="button"
               >
                 Home
               </button>
