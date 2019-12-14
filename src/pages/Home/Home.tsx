@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { Grid } from '~/components/shared/Grid';
 import divideGrid from '~/utils/divideGrid';
@@ -9,7 +9,7 @@ import { SIZE } from '~/constants';
 const result = divideGrid(SIZE);
 const initialGrid = makeGrid(result.rows, result.cols, () => 0);
 
-const Home = () => {
+const Home: FunctionComponent = () => {
   return (
     <section className="flex-grow-1 py-0">
       <article>

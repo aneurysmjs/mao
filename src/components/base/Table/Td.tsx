@@ -10,7 +10,7 @@ interface PropsType {
 }
 
 const Td: FunctionComponent<PropsType> = ({ children, style, col, row }: PropsType) => (
-  <div style={style || {}} className="table__td" data-col={col} data-row={row}>
+  <div className="table__td" data-col={col} data-row={row} style={style || {}}>
     {children}
   </div>
 );
