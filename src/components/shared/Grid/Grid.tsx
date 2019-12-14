@@ -1,15 +1,7 @@
-import React, { useContext, SyntheticEvent } from 'react';
-// @ts-ignore
-import has from 'ramda/src/has';
-// @ts-ignore
-import allPass from 'ramda/src/allPass';
-// @ts-ignore
+import React, { useCallback } from 'react';
 import uuidv1 from 'uuid/v1';
 
 import { SIZE } from '~/constants';
-// import makeGrid from '~/utils/makeGrid';
-
-import AppContext from '~/components/core/App/AppContext';
 
 import { Table, Tr, Td } from '~/components/base/Table';
 
@@ -26,28 +18,22 @@ interface PropsType {
 }
 
 function Grid({ grid, size }: PropsType): JSX.Element {
-  const { handle } = useContext(AppContext);
   const gridSize = `${size != null ? size : SIZE}px`;
 
-  const handleClick = (evt: SyntheticEvent<HTMLDivElement>): void => {
-    const { target } = evt;
-    const hasCoords = [has('col'), has('row')];
-    // @ts-ignore
-    if (target instanceof HTMLDivElement && allPass(hasCoords)(target.dataset)) {
-      // @ts-ignore
-      handle({ ...target.dataset });
-    }
-  };
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  const handleClick = (): void => {};
 
   return (
     <div
-      className="grid"
       onClick={handleClick}
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
+      onKeyPress={useCallback((): void => {}, [])}
       role="grid"
       style={{
         height: gridSize,
         width: gridSize,
-      }} 
+      }}
+      tabIndex={-1}
     >
       <Table isFull>
         {grid.map((row, i) => (
@@ -56,12 +42,12 @@ function Grid({ grid, size }: PropsType): JSX.Element {
               const id = uuidv1();
               return (
                 <Td
+                  col={i}
                   key={id}
+                  row={j}
                   style={{
                     background: col ? on : off,
                   }}
-                  col={i}
-                  row={j}
                 />
               );
             })}
