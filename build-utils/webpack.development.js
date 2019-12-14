@@ -1,5 +1,4 @@
 const webpackMerge = require('webpack-merge');
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 const paths = require('./paths');
 
@@ -30,10 +29,6 @@ module.exports = (env) => {
        */
       historyApiFallback: true,
     },
-
-    plugins: [
-      new HardSourceWebpackPlugin(),
-    ],
 
   });
 };
