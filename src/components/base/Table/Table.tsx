@@ -3,8 +3,8 @@ import React, { ReactNode, FunctionComponent } from 'react';
 import './Table.scss';
 
 interface PropsType {
-  children: ReactNode;
-  isFull: boolean;
+  children?: ReactNode;
+  isFull?: boolean;
 }
 
 const Table: FunctionComponent<PropsType> = ({ children, isFull }: PropsType) => (

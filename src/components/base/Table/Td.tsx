@@ -5,8 +5,8 @@ interface PropsType {
   style?: {
     [key: string]: string | number;
   };
-  col: number;
-  row: number;
+  col?: number;
+  row?: number;
 }
 
 const Td: FunctionComponent<PropsType> = ({ children, style, col, row }: PropsType) => (
