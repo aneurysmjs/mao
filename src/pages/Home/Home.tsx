@@ -1,20 +1,13 @@
 import React, { FunctionComponent } from 'react';
 
-import { Grid } from '~/components/shared/Grid';
-import divideGrid from '~/utils/divideGrid';
-import makeGrid from '~/utils/makeGrid';
-
-import { SIZE } from '~/constants';
-
-const result = divideGrid(SIZE);
-const initialGrid = makeGrid(result.rows, result.cols, () => 0);
+import { Finals } from '~/components/shared/Finals';
 
 const Home: FunctionComponent = () => {
   return (
     <section className="flex-grow-1 py-0">
       <article>
         <p className="text-center">中文</p>
-        <Grid grid={initialGrid} size={SIZE} />
+        <Finals />
       </article>
     </section>
   );
