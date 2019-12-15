@@ -30,6 +30,7 @@
     border: 1px solid #dee2e6;
     @include modifier(hovered) {
       &:hover {
+        color: #ffffff;
         background: #2c3e50;
       }
     }
