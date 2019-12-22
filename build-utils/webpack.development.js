@@ -15,12 +15,13 @@ module.exports = (env) => {
       publicPath: 'http://localhost:9000/',
       filename: '[name].bundle.js',
       sourceMapFilename: '[name].map',
+      chunkFilename: '[name].js'
     },
 
     devServer: {
       // By default it will use your current working directory to serve content,
       // but you can modify this to another directory
-      contentBase: paths.src,
+      contentBase: [paths.src, `${paths.src}/assets`,],
       compress: true,
       port: 9000,
       /**

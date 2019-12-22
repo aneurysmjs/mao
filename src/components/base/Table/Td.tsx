@@ -3,6 +3,9 @@ import classNames from 'classnames';
 
 interface PropsType {
   children?: ReactNode;
+  data?: {
+    [K: string]: string | number;
+  };
   col?: number;
   row?: number;
   isHover?: boolean;
@@ -11,13 +14,19 @@ interface PropsType {
   };
 }
 
-const Td: FunctionComponent<PropsType> = ({ children, style, col, row, isHover }: PropsType) => (
+const Td: FunctionComponent<PropsType> = ({
+  children,
+  style,
+  col,
+  row,
+  isHover,
+  data,
+}: PropsType) => (
   <div
     className={classNames('table__td', {
       'table__td--hovered': isHover,
     })}
-    data-col={col}
-    data-row={row}
+    {...data}
     style={style || {}}
   >
     {children}

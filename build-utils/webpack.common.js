@@ -54,6 +54,14 @@ module.exports = (mode) => {
           ],
         },
         {
+          test: /\.mp3$/,
+          // include: `${paths.src}/assets/`,
+          loader: 'file-loader',
+          options: {
+            name: 'assets/mp3/[name].[ext]',
+          },
+        },
+        {
           test: /\.(png|jpe?g|gif)$/,
           use: [
             {
@@ -85,17 +93,17 @@ module.exports = (mode) => {
         template: setupPath('../src/index.html'),
       }),
       // copy files and folders to specific paths.
-      new CopyWebpackPlugin(
-        [
-          // Copy `assets` contents to {output}/assets/
-          { from: 'src/assets', to: 'assets/' },
-          // 'src/service-worker.js',
-          // 'src/manifest.json'
-        ],
-        {
-          ignore: ['.DS_Store',  '*.scss',]
-        }
-      ),
+      // new CopyWebpackPlugin(
+      //   [
+      //     // Copy `assets` contents to {output}/assets/
+      //     { from: 'src/assets', to: 'assets/' },
+      //     // 'src/service-worker.js',
+      //     // 'src/manifest.json'
+      //   ],
+      //   {
+      //     ignore: ['.DS_Store',  '*.scss',]
+      //   }
+      // ),
     ],
   };
 };
