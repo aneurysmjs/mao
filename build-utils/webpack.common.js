@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const { setupPath } = require('./helpers');
@@ -92,18 +91,6 @@ module.exports = (mode) => {
       new HtmlWebpackPlugin({
         template: setupPath('../src/index.html'),
       }),
-      // copy files and folders to specific paths.
-      // new CopyWebpackPlugin(
-      //   [
-      //     // Copy `assets` contents to {output}/assets/
-      //     { from: 'src/assets', to: 'assets/' },
-      //     // 'src/service-worker.js',
-      //     // 'src/manifest.json'
-      //   ],
-      //   {
-      //     ignore: ['.DS_Store',  '*.scss',]
-      //   }
-      // ),
     ],
   };
 };
